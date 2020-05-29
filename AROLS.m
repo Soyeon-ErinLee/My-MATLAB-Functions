@@ -1,3 +1,4 @@
+% Obtain OLS Estimator of AR Process
 function [beta,Sig2,Cov]=AROLS(y,p)
 T=size(y,1);
 Y=y(p+1:T,1);
@@ -11,7 +12,7 @@ if p>0
 elseif p==0
     X=ones(T-p,1);
 end
-    beta=(X'*X)\(X'*Y); %inv쓰면 속도 느려지니까 동일한 backlash 사용
+    beta=(X'*X)\(X'*Y);
     U=Y-X*beta;
     Sig2=(U'*U)/(T-p-1);
     Cov=Sig2*inv(X'*X);
