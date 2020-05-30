@@ -1,2 +1,2 @@
 # Time_series
-MATLAB mannual functions for Time Series Analysis
+my mannual functions for Time Series Analysis using MATLAB
